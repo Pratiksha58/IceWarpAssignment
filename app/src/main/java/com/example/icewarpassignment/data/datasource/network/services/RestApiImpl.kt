@@ -1,6 +1,5 @@
 package com.example.icewarpassignment.data.datasource.network.services
 
-import android.app.appsearch.GetSchemaResponse
 import android.content.Context
 import android.net.ConnectivityManager
 import android.util.Log
@@ -8,7 +7,8 @@ import com.example.icewarpassignment.data.datasource.exceptions.ExceptionFactory
 import com.example.icewarpassignment.data.datasource.exceptions.NetworkUnavailableException
 import com.example.icewarpassignment.data.datasource.request.GetChannelRequest
 import com.example.icewarpassignment.data.datasource.request.LoginRequest
-import com.example.icewarpassignment.data.datasource.response.*
+import com.example.icewarpassignment.data.datasource.response.ChannelListResponse
+import com.example.icewarpassignment.data.datasource.response.LoginResponse
 import com.go2future.tuvoclient.ErrorResponse
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

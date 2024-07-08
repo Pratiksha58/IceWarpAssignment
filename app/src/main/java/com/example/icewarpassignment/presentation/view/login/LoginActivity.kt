@@ -80,7 +80,6 @@ class LoginActivity : BaseActivity() {
                     val token = loginResponse.mLoginEntity?.token
                     val email = loginResponse.mLoginEntity?.email
                     if (token != null && email != null) {
-                        mLoginViewModel.setAuthorizationToken(token)
                         runOnUiThread {
                             UserApplication.database?.iceWarpDBQueries?.insertUser(1,token, email)
                         }

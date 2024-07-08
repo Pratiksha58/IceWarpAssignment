@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import com.example.icewarpassignment.data.datasource.request.LoginRequest
 import com.example.icewarpassignment.domain.entity.LoginEntity
 import com.example.icewarpassignment.domain.interactor.LoginUC
-import com.example.icewarpassignment.presentation.utils.SharedPrefsHelper
 import io.reactivex.observers.DisposableObserver
 
 class LoginViewModel(var loginUC: LoginUC) : ViewModel() {
@@ -39,25 +38,5 @@ class LoginViewModel(var loginUC: LoginUC) : ViewModel() {
             }
 
         }, mLoginRequest)
-    }
-
-    fun isMobileNoValid(phone: String): Boolean {
-        return if (phone.length < 10) {
-            false
-        } else {
-            return android.util.Patterns.PHONE.matcher(phone).matches();
-        }
-    }
-
-    fun isEmailValid(email: String): Boolean {
-        return !email.isNullOrEmpty()
-    }
-
-
-    fun setAuthorizationToken(value: String) {
-        SharedPrefsHelper.setAuthorizationToken(value)
-    }
-    fun getAuthorizationToken(defaultValue: String): String? {
-        return SharedPrefsHelper.getAuthorizationToken(defaultValue)
     }
 }

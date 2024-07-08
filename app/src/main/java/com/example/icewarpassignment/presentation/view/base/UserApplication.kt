@@ -4,7 +4,6 @@ import android.app.Application
 import com.example.icewarpassignment.Database
 import com.example.icewarpassignment.presentation.di.PostModule
 import com.example.icewarpassignment.presentation.di.networkModule
-import com.example.icewarpassignment.presentation.utils.SharedPrefsHelper.preferencesModule
 import com.facebook.stetho.Stetho
 import com.squareup.sqldelight.android.AndroidSqliteDriver
 import org.koin.android.ext.koin.androidContext
@@ -31,8 +30,7 @@ class UserApplication : Application(){
             modules(
                 listOf(
                     PostModule,
-                    networkModule,
-                    preferencesModule
+                    networkModule
                 )
             )
         }

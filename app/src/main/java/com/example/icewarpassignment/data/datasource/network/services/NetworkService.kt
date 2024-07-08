@@ -1,14 +1,13 @@
 package com.example.icewarpassignment.data.datasource.network.services
 
-import com.example.icewarpassignment.data.datasource.request.LoginRequest
 import com.example.icewarpassignment.data.datasource.response.ChannelListResponse
 import com.example.icewarpassignment.data.datasource.response.LoginResponse
 import retrofit2.Call
-import retrofit2.http.*
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
+import retrofit2.http.POST
 
-//https://mofa.onice.io/teamchatapi/iwauthentication.login.plain
 interface NetworkService {
-//    @Headers("Content-Type: application/x-www-form-urlencoded")
     @FormUrlEncoded
     @POST("teamchatapi/iwauthentication.login.plain")
     fun doLogin(@Field("username") username:String,@Field("password") password:String): Call<LoginResponse>

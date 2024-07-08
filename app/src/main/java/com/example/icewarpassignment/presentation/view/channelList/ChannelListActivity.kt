@@ -6,18 +6,13 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ExpandableListAdapter
 import android.widget.ExpandableListView
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.example.icewarpassignment.R
-import com.example.icewarpassignment.data.datasource.exceptions.NetworkUnavailableException
 import com.example.icewarpassignment.data.datasource.request.GetChannelRequest
 import com.example.icewarpassignment.domain.entity.ChannelE
-import com.example.icewarpassignment.domain.entity.ChannelListEntity
 import com.example.icewarpassignment.presentation.enums.Status
-import com.example.icewarpassignment.presentation.utils.SharedPrefsHelper
 import com.example.icewarpassignment.presentation.view.base.BaseActivity
 import com.example.icewarpassignment.presentation.view.base.UserApplication
-import com.example.icewarpassignment.presentation.view.login.LoginViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
