@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ice Warp Assignment</string>
+    <string name="sign_in">Sign in to Ice Warp</string>
+    <string name="password">Password</string>
+    <string name="username">UserName</string>
+    <string name="host">Host</string>
+    <string name="login">LOGIN</string>
+</resources>
